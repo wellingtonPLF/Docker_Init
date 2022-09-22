@@ -4,33 +4,35 @@ docker pull ubuntu //faz o download da imagem
 
 docker run ubuntu //faz o download da imagem e cria o container ao mesmo tempo
 
-docker run -d --name <nome-qualquer> --rm -it <name-da-imagem> bash //Startar o container e entrar nele (O --rm serve para = Quando vc dar um stop no container ele
-automaticamente fazer a remoção do mesmo) && (O --name serve para = Definir o nome do container) && (O -it serve para = Startar o container e entrar nele) && 
-(O -d serve para = Não entrar no container, além de exibir o ID do container) && (O run server para = criar o container com base na imagems)
+docker run -it <nome-da-imagem> //Starta o container
 
-docker ps //Mostra os containers que estão startados(em estado de execução) e suas informações
+docker run -d --name <nome-qualquer> --rm -it <name-da-imagem> bash //Starta o container e entra nele (O --rm serve para = Quando vc dar um stop no container ele
+automaticamente fazer a remoÃ§Ã£o do mesmo) && (O --name serve para = Definir o nome do container) && (O -it serve para = Startar o container e entrar nele) && 
+(O -d serve para = NÃ£o entrar no container, alÃ©m de exibir o ID do container)
 
-docker ps -a //Mostra os containers existentes e suas informações 
+docker ps //Mostra os containers que estÃ£o startados(em estado de execuÃ§Ã£o) e suas informaÃ§Ãµes
 
-docker stop <container-ID> //Parar a execução do container(podendo para mais de um, apenas apertando a barra de espaço e colocando o proximo ID que vc deseja parar
+docker ps -a //Mostra os containers existentes e suas informaÃ§Ãµes 
+
+docker stop <container-ID> //Parar a execuÃ§Ã£o do container(podendo para mais de um, apenas apertando a barra de espaÃ§o e colocando o proximo ID que vc deseja parar
 e assim por diante)
 
-docker stop $(docker ps -aq) //Para todos os containers que estão em execução
+docker stop $(docker ps -aq) //Para todos os containers que estÃ£o em execuÃ§Ã£o
 
 docker start <container-ID> //Serve para voltar a execultar o container que foi parado
 
 docker exec -it <container-ID> /bin/bash //Server para entrar em um container 
 
-docker attach <container-ID> //Entrar no container que está em execução
+docker attach <container-ID> //Entrar no container que estÃ¡ em execuÃ§Ã£o
 
-docker rm <container-ID> //Kill the container( um container só irá ser removido quando sua execução for encerrada)(Ao apertar a barra de espaço e acrecentar um 
-outro ID vc estará removendo-o também e assim por diante)
+docker rm <container-ID> //Kill the container( um container sÃ³ irÃ¡ ser removido quando sua execuÃ§Ã£o for encerrada)(Ao apertar a barra de espaÃ§o e acrecentar um 
+outro ID vc estarÃ¡ removendo-o tambÃ©m e assim por diante)
 
 docker rm $(docker ps -aq) //Kill all containers
 
-ctrl+p+q //Sair da prompt do container sem parar sua execução
+ctrl+p+q //Sair da prompt do container sem parar sua execuÃ§Ã£o
 
-exit //Sair da prompt do container parando sua execução
+exit //Sair da prompt do container parando sua execuÃ§Ã£o
 
 docker rmi <image-ID> //Kill the image
 
