@@ -6,7 +6,7 @@ docker images //See all downloaded images
 
 docker run ubuntu //faz o download da imagem, além de CRIAR O CONTAINER ao mesmo tempo
 
-docker run -d --name <nome-qualquer> --rm -it <name-da-imagem> //Starta o container além das seguintes opções;
+docker run -d -p 4200:4200 --name <nome-qualquer> --rm -it <name-da-imagem> //Starta o container além das seguintes opções;
 (O --rm serve para = Quando vc dar um stop no container ele
 automaticamente fazer a remoção do mesmo) && (O --name serve para = Definir o nome do container) && (O -it serve para = Startar o container e entrar nele) && 
 (O -d serve para = Não entrar no container, além de exibir o ID do container)
