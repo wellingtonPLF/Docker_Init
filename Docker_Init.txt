@@ -4,6 +4,8 @@ docker pull ubuntu //faz o download da imagem
 
 docker images //See all downloaded images
 
+docker build -t <set-image-name> DockerFile //Building an image using DockerFile (-t is tag, to name an image)
+
 docker run ubuntu //faz o download da imagem, além de CRIAR O CONTAINER ao mesmo tempo
 
 docker run -d -p 4200:4200 --name <nome-qualquer> --rm -it <name-da-imagem> //INICIA o CONTAINER além das seguintes opções;
